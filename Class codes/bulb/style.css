@@ -1,0 +1,88 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.gate-selector {
+    margin-bottom: 20px;
+}
+
+.gate-selector label {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.inputs {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-control label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.toggle-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background-color: #ccc;
+    color: #333;
+    min-width: 80px; /* Ensure buttons have same width */
+    text-align: center;
+}
+
+.toggle-button.on {
+    background-color: #4CAF50; /* Green */
+    color: white;
+}
+
+.output {
+    text-align: center;
+}
+
+.bulb {
+    width: 100px;
+    height: 100px;
+    background-color: #555; /* Dark grey for off bulb */
+    border-radius: 50%;
+    margin: 20px auto;
+    position: relative;
+    box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.bulb.on {
+    background-color: #ffeb3b; /* Yellow for on bulb */
+    box-shadow: 0 0 20px 5px #ffeb3b, /* Outer glow */
+                inset 0 -5px 10px rgba(255, 255, 255, 0.5); /* Inner highlight */
+}
+
+/* Simple base for the bulb */
+.bulb::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 25px;
+    background-color: #777;
+    border-radius: 0 0 5px 5px;
+}
